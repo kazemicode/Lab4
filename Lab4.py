@@ -104,7 +104,7 @@ def rotatePic(inPic):
   mypic = makeEmptyPicture(getHeight(inPic), getWidth(inPic))
   for y in range (0, getHeight(mypic)):
     for x in range (0, getWidth(mypic)):
-      setColor(getPixel(mypic, x, y), getColor(getPixel(inPic, y, x)))
+      setColor(getPixel(mypic, x, y), getColor(getPixel(inPic, getHeight(mypic) - y - 1, getWidth(mypic) - x - 1)))
   show(mypic)
   return mypic
 ##################
@@ -134,7 +134,7 @@ def shrink(inPic):
 ################################################################
 def main():
   ## Output directory
-  dir = "/Documents/CST205/Lab4/output/"
+  dir = "/"
   writePict(mirrorVerticalL(getPic()), dir + "mui_mirror_vertical_LtoR.jpg")
   writePict(mirrorVerticalR(getPic()), dir + "mui_mirror_vertical_RtoL.jpg")
   writePict(mirrorBottomToTop(getPic()), dir + "mui_mirror_horizontol_BtoT.jpg")
