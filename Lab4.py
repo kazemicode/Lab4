@@ -5,6 +5,20 @@
 # Change output directory to a path that exists
 # on your local machine to write files
 
+################################################################
+# The main function performs a test of all functions in Lab 4. 
+# Please change dir to your a local path before calling.
+################################################################
+def main():
+  ## Output directory
+  dir = "/"
+  writePict(mirrorVerticalL(getPic()), dir + "mui_mirror_vertical_LtoR.jpg")
+  writePict(mirrorVerticalR(getPic()), dir + "mui_mirror_vertical_RtoL.jpg")
+  writePict(mirrorBottomToTop(getPic()), dir + "mui_mirror_horizontol_BtoT.jpg")
+  writePict(mirrorTopToBottom(getPic()), dir + "mui_mirror_horizontol_TtoB.jpg")
+  writePict(QuadMirror(getPic()), dir + "mui_QuadMirror.jpg")
+  writePict(rotatePic(getPic()), dir + "mui_rotated_90.jpg")
+  writePict(shrink(getPic()), dir + "mui_shrink.jpg")
 
 # Returns the picture given a directory
 def getPic():
@@ -128,17 +142,3 @@ def shrink(inPic):
 # End Problem 4
 ##################
 
-################################################################
-# The main function performs a test of all functions in Lab 4. 
-# Please change dir to your a local path before calling.
-################################################################
-def main():
-  ## Output directory
-  dir = "/"
-  writePict(mirrorVerticalL(getPic()), dir + "mui_mirror_vertical_LtoR.jpg")
-  writePict(mirrorVerticalR(getPic()), dir + "mui_mirror_vertical_RtoL.jpg")
-  writePict(mirrorBottomToTop(getPic()), dir + "mui_mirror_horizontol_BtoT.jpg")
-  writePict(mirrorTopToBottom(getPic()), dir + "mui_mirror_horizontol_TtoB.jpg")
-  writePict(QuadMirror(getPic()), dir + "mui_QuadMirror.jpg")
-  writePict(rotatePic(getPic()), dir + "mui_rotated_90.jpg")
-  writePict(shrink(getPic()), dir + "mui_shrink.jpg")
