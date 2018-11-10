@@ -1,3 +1,4 @@
+
 # Sara Kazemi
 # Lab 4
 # Use the main function (at the end of program)
@@ -141,4 +142,3 @@ def shrink(inPic):
 ##################
 # End Problem 4
 ##################
-
